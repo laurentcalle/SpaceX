@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Tracker View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="TrackerViewController" customModule="SpaceX" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="rRH-yQ-fZY">
+                                <rect key="frame" x="0.0" y="88" width="414" height="808"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="missionCell" rowHeight="108" id="St4-iY-TDq" customClass="MissionTableViewCell" customModule="SpaceX" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="44.5" width="414" height="108"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="St4-iY-TDq" id="mao-9u-tgy">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="108"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="Mission Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CgZ-h5-4Us">
+                                                    <rect key="frame" x="20" y="11" width="303.5" height="24"/>
+                                                    <color key="tintColor" red="0.1084735468" green="0.26224452259999997" blue="0.28235775229999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="24" id="834-wA-Erb"/>
+                                                        <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="287" id="Nrg-kI-Rn0"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="16"/>
+                                                    <color key="textColor" red="0.1084735468" green="0.26224452259999997" blue="0.28235775229999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Mission Description" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iW1-VE-BSh">
+                                                    <rect key="frame" x="20" y="43" width="374" height="54"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Year" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="R29-qA-ciM">
+                                                    <rect key="frame" x="344" y="12" width="50" height="21"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="50" id="0qJ-a7-rct"/>
+                                                        <constraint firstAttribute="height" constant="21" id="2vg-5B-OxA"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="R29-qA-ciM" firstAttribute="trailing" secondItem="mao-9u-tgy" secondAttribute="trailingMargin" id="3Ni-fH-zX2"/>
+                                                <constraint firstItem="iW1-VE-BSh" firstAttribute="bottom" secondItem="mao-9u-tgy" secondAttribute="bottomMargin" id="7mv-yT-IqO"/>
+                                                <constraint firstItem="R29-qA-ciM" firstAttribute="leading" secondItem="CgZ-h5-4Us" secondAttribute="trailing" constant="20.5" id="7t2-2v-yhT"/>
+                                                <constraint firstItem="iW1-VE-BSh" firstAttribute="trailing" secondItem="mao-9u-tgy" secondAttribute="trailingMargin" id="FZt-QU-wDl"/>
+                                                <constraint firstItem="iW1-VE-BSh" firstAttribute="top" secondItem="CgZ-h5-4Us" secondAttribute="bottom" constant="8" id="IUB-Uq-3yx"/>
+                                                <constraint firstItem="CgZ-h5-4Us" firstAttribute="leading" secondItem="mao-9u-tgy" secondAttribute="leadingMargin" id="MRl-W1-fmG"/>
+                                                <constraint firstItem="CgZ-h5-4Us" firstAttribute="top" secondItem="mao-9u-tgy" secondAttribute="topMargin" id="Nv7-Md-zVZ"/>
+                                                <constraint firstItem="R29-qA-ciM" firstAttribute="top" secondItem="mao-9u-tgy" secondAttribute="topMargin" constant="1" id="aQs-IO-wy8"/>
+                                                <constraint firstItem="iW1-VE-BSh" firstAttribute="leading" secondItem="mao-9u-tgy" secondAttribute="leadingMargin" id="q38-4Q-NjW"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="missionDescriptionLbl" destination="iW1-VE-BSh" id="Uy2-67-dsu"/>
+                                            <outlet property="missionNameLbl" destination="CgZ-h5-4Us" id="ahR-rd-7HE"/>
+                                            <outlet property="missionYearLbl" destination="R29-qA-ciM" id="9Tt-Hv-lrZ"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                            <navigationBar contentMode="scaleToFill" fixedFrame="YES" insetsLayoutMarginsFromSafeArea="NO" translatesAutoresizingMaskIntoConstraints="NO" id="78b-28-fJv">
+                                <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                <items>
+                                    <navigationItem title="SpaceX Missions" id="rnU-8q-ivi">
+                                        <barButtonItem key="leftBarButtonItem" title="Item" image="camera.filters" catalog="system" id="5Yi-Hm-Z2I">
+                                            <color key="tintColor" red="0.29252818317891688" green="0.30403738310842798" blue="0.30093367029798768" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                            <connections>
+                                                <action selector="filterAction:" destination="BYZ-38-t0r" id="jaK-go-P9V"/>
+                                            </connections>
+                                        </barButtonItem>
+                                        <barButtonItem key="rightBarButtonItem" title="Item" image="arrow.up.arrow.down" catalog="system" id="Y4t-JD-DGQ">
+                                            <color key="tintColor" red="0.29252818317891688" green="0.30403738310842798" blue="0.30093367029798768" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                            <connections>
+                                                <action selector="sortByAction:" destination="BYZ-38-t0r" id="f1b-4y-A32"/>
+                                            </connections>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="CTI-NM-nmL"/>
+                    <connections>
+                        <outlet property="filterButton" destination="5Yi-Hm-Z2I" id="VUY-qU-92u"/>
+                        <outlet property="missionsTable" destination="rRH-yQ-fZY" id="EdO-Hs-fzx"/>
+                        <outlet property="sortByButton" destination="Y4t-JD-DGQ" id="xhB-nL-g0Y"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1042.0289855072465" y="109.82142857142857"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="arrow.up.arrow.down" catalog="system" width="128" height="98"/>
+        <image name="camera.filters" catalog="system" width="128" height="116"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

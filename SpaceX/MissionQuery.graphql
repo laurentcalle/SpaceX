@@ -1,0 +1,11 @@
+query MissionQuery {
+  launches {
+    mission_name
+    launch_year
+    launch_success
+    details
+    links {
+      article_link
+    }
+  }
+}
